@@ -6,4 +6,4 @@ import SchemaMenu from '@/Components/SchemaMenu.vue'
   <SchemaMenu />
 </template>
 
-<style scoped></style>
+<style></style>

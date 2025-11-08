@@ -1,10 +1,16 @@
 :root {
   --color-bg: white;
+  --color-hover: #ebebeb;
+  --color-text: black;
 }
 
 body.light {
   --color-bg: white;
+  --color-hover: #ebebeb;
+  --color-text: black;
 }
 body.dark {
   --color-bg: black;
+  --color-hover: #333333;
+  --color-text: white;
 }

@@ -1,0 +1,82 @@
+header {
+  inline-size: 100%;
+
+  padding: 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .langSelect {
+    inline-size: 11rem;
+
+    border-radius: 2px;
+    padding: 0.1rem 0.4rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.3rem;
+
+    background-color: var(--color-hover);
+
+    & img {
+      inline-size: 10%;
+      /* block-size: 8%; */
+    }
+    & select {
+      background-color: var(--color-hover);
+    }
+  }
+
+  select {
+    border-radius: 2px;
+    padding: 0.1rem 0.4rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.8rem;
+
+    background-color: var(--color-hover);
+  }
+
+  .langSelect2 {
+    inline-size: 12rem;
+    & .select {
+      inline-size: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.3rem;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-hover);
+      }
+
+      & .label {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 0.5rem;
+      }
+    }
+
+    & img {
+      inline-size: 9%;
+      /* block-size: 8%; */
+    }
+
+    & i {
+      color: black;
+    }
+
+    & ul {
+      display: none;
+    }
+  }
+}

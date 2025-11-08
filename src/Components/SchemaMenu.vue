@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue'
+import type { ILanguage } from '@/lib/interfaces/ILanguages'
+import 'primeicons/primeicons.css'
+import { onMounted, provide, ref, watch } from 'vue'
+import { languages } from '../lib/resources/languages'
+import { themes } from '../lib/resources/themesResource'
 
+const language = ref(languages[1] as ILanguage)
 const theme = ref('light')
+
+provide(language, language)
 
 watch(theme, () => {
   console.log(theme.value)
@@ -16,14 +23,19 @@ onMounted(() => {
 
 <template>
   <header>
-    <select name="lang" id="lang">
-      <option value="pt-br">Brazilian Portuguese</option>
-      <option value="en">English</option>
-    </select>
+    <div class="langSelect">
+      <img :src="language.flag" alt="" />
+      <select name="lang" id="lang" v-model="language">
+        <option v-for="(lang, index) in languages" :key="index" :value="lang">
+          {{ lang.label }}
+        </option>
+      </select>
+    </div>
 
     <select name="theme" id="theme" v-model="theme">
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
+      <option v-for="(theme, index) in themes" :key="index" :value="theme.key">
+        {{ theme.label }}
+      </option>
     </select>
   </header>
 </template>
