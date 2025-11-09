@@ -2,11 +2,11 @@ export const languages = [
   {
     key: 'en',
     label: 'English',
-    flag: '/src/assets/styles/icons/usaFlag.png',
+    flag: '/src/assets/icons/usaFlag.png',
   },
   {
     key: 'pt-br',
     label: 'Brazilian Portuguese',
-    flag: '/src/assets/styles/icons/brazilFlag.png',
+    flag: '/src/assets/icons/brazilFlag.png',
   },
 ]
