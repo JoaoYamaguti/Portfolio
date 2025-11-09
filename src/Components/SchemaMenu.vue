@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ILanguage } from '@/lib/interfaces/ILanguages'
 import 'primeicons/primeicons.css'
 import { inject, onMounted, ref, watch } from 'vue'
 import { languages } from '../lib/resources/languages'
@@ -6,7 +7,7 @@ import { themes } from '../lib/resources/themesResource'
 
 const theme = ref('light')
 
-const lang = inject('lang')
+const language = inject<ILanguage>('language')
 
 watch(theme, () => {
   document.body.classList.value = theme.value
@@ -20,8 +21,8 @@ onMounted(() => {
 <template>
   <header>
     <div class="langSelect">
-      <img :src="lang.language.flag" alt="" />
-      <select name="lang" id="lang" v-model="lang.language">
+      <img :src="language?.flag" alt="" />
+      <select name="lang" id="lang" v-model="language">
         <option v-for="(lang, index) in languages" :key="index" :value="lang">
           {{ lang.label }}
         </option>
