@@ -8,12 +8,12 @@ const content = inject<IContent>('content')
 
 <template>
   <div class="profileBanner">
-    <img :src="profilePicture" alt="Profile Picture" />
+    <img :src="profilePicture" alt="Profile Picture" loading="eager" />
     <div class="description">
-      <span>{{ content?.welcome }}</span>
-      <p></p>
+      <h2>{{ content?.welcome }}</h2>
+      <p>{{ content?.description }}</p>
     </div>
   </div>
 </template>
 
-<style src=""></style>
+<style src="../assets/styles/profileBanner.css"></style>

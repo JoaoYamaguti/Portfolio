@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import ProfileBanner from '@/Components/ProfileBanner.vue'
-import SchemaMenu from '@/Components/SchemaMenu.vue'
+import FooterComponent from '@/Components/FooterComponent.vue'
+import ProfileBanner from '@/Components/ProfileBannerComponent.vue'
+import SchemaMenu from '@/Components/SchemaMenuComponent.vue'
 </script>
 
 <template>
-  <SchemaMenu />
-  <main>
-    <ProfileBanner />
-  </main>
+  <div class="home">
+    <SchemaMenu />
+    <main>
+      <ProfileBanner />
+    </main>
+    <FooterComponent />
+  </div>
 </template>
 
-<style></style>
+<style src="../assets/styles/home.css" />

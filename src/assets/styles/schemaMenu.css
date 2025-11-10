@@ -1,36 +1,51 @@
 header {
   inline-size: 100%;
 
-  padding: 0.5rem;
+  border-bottom: solid 1px var(--color-hover);
+  padding-bottom: 0.7rem;
+
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   gap: 1rem;
 
   .langSelect {
-    max-inline-size: 12rem;
+    max-inline-size: 11.4rem;
+
+    border: solid 2px var(--color-hover);
 
     border-radius: 2px;
-    padding: 0.2rem 0.2rem;
+    padding: 0.2rem 0 0.2rem 0.2rem;
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 0.3rem;
 
-    background-color: var(--color-hover);
+    background-color: var(--color-surface);
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
 
     & img {
       inline-size: 10%;
       /* block-size: 8%; */
     }
     & select {
-      background-color: var(--color-hover);
+      border: none;
+
+      background-color: inherit;
+
+      cursor: pointer;
     }
   }
 
-  select {
+  .themeSelect {
+    border: solid 2px var(--color-hover);
     border-radius: 2px;
     padding: 0.2rem 0.5rem;
 
@@ -41,11 +56,25 @@ header {
 
     font-size: 0.8rem;
 
-    background-color: var(--color-hover);
+    background-color: var(--color-surface);
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
+
+    cursor: pointer;
 
     & option {
       padding: 0.1rem 0.4rem;
     }
+  }
+
+  @media (width > 30rem) {
+    header {
+      justify-content: flex-end;
+    }
+  }
+  @media (min-width: 48rem) {
   }
 
   .langSelect2 {
@@ -84,12 +113,4 @@ header {
       display: none;
     }
   }
-}
-
-@media (min-width: 480px) {
-  header {
-    justify-content: flex-end;
-  }
-}
-@media (min-width: 768px) {
 }

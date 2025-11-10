@@ -1,1 +1,1 @@
-export const profilePicture = '/src/assets/images/brazilFlag.png'
+export const profilePicture = 'https://github.com/JoaoYamaguti.png'

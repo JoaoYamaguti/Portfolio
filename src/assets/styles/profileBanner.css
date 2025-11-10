@@ -1,0 +1,46 @@
+.profileBanner {
+  max-inline-size: 100%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  & img {
+    max-inline-size: 15rem;
+    max-block-size: auto;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  & .description {
+    max-inline-size: 33rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.8rem;
+  }
+
+  & h2 {
+    font-size: calc(1.8rem + 0.5vw);
+    font-family: var(--font-cursive);
+  }
+  & p {
+    font-size: calc(1rem + 0.5vw);
+    line-height: calc(1.5rem + 0.5vw);
+  }
+}
+
+@media (width > 48rem) {
+  .profileBanner {
+    & img {
+      max-inline-size: 12rem;
+    }
+
+    & .description {
+    }
+  }
+}

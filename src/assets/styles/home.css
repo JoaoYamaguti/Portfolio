@@ -1,0 +1,15 @@
+.home {
+  padding: 0.75rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+}
+
+main {
+  inline-size: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}

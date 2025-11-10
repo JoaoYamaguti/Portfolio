@@ -4,7 +4,7 @@ import type { ILanguage } from '@/lib/interfaces/ILanguages'
 import { contentEn } from '@/lib/resources/content_en'
 import { contentPtBr } from '@/lib/resources/content_pt-br'
 import { languages } from '@/lib/resources/languages'
-import { provide, ref, watch } from 'vue'
+import { onMounted, provide, ref, watch } from 'vue'
 
 const language = ref(languages[0] as ILanguage)
 const content = ref(contentEn as IContent)
@@ -12,6 +12,10 @@ const content = ref(contentEn as IContent)
 watch(language, () => {
   if (language.value.key == 'en') content.value = contentEn
   if (language.value.key == 'pt-br') content.value = contentPtBr
+})
+
+onMounted(() => {
+  console.log(window.matchMedia('(prefers-color-scheme: dark)').matches)
 })
 
 provide('language', language)

@@ -5,7 +5,7 @@ import { inject, onMounted, ref, watch } from 'vue'
 import { languages } from '../lib/resources/languages'
 import { themes } from '../lib/resources/themesResource'
 
-const theme = ref('light')
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? ref('dark') : ref('light')
 
 const language = inject<ILanguage>('language')
 
@@ -29,7 +29,7 @@ onMounted(() => {
       </select>
     </div>
 
-    <select name="theme" id="theme" v-model="theme">
+    <select name="theme" id="theme" v-model="theme" class="themeSelect">
       <option v-for="(theme, index) in themes" :key="index" :value="theme.key">
         {{ theme.label }}
       </option>
