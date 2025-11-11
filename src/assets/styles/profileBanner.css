@@ -17,7 +17,7 @@
   }
 
   & .description {
-    max-inline-size: 33rem;
+    max-inline-size: 100%;
 
     display: flex;
     flex-flow: column nowrap;
@@ -41,6 +41,7 @@
     }
 
     & .description {
+      max-inline-size: 30rem;
     }
   }
 }

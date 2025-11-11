@@ -7,8 +7,7 @@
   --color-hover-dark: #34363a;
   --color-text-light: #2e2e2e;
   --color-text-dark: #e6e7eb;
-  --color-primary-light: #6eb5ff;
-  --color-primary-dark: #85c5ff;
+  --color-primary: #ffa200;
   --color-accent-light: #f6c7d0;
   --color-accent-dark: #f0b6c0;
   --color-warning-light: #ffdfa3;
@@ -22,7 +21,6 @@ body.light {
   --color-surface: var(--color-surface-light);
   --color-hover: var(--color-hover-light);
   --color-text: var(--color-text-light);
-  --color-primary: var(--color-primary-light);
   --color-accent: var(--color-accent-light);
   --color-warning: var(--color-warning-light);
   --color-success: var(--color-success-light);
@@ -32,7 +30,6 @@ body.dark {
   --color-surface: var(--color-surface-dark);
   --color-hover: var(--color-hover-dark);
   --color-text: var(--color-text-dark);
-  --color-primary: var(--color-primary-dark);
   --color-accent: var(--color-accent-dark);
   --color-warning: var(--color-warning-dark);
   --color-success: var(--color-success-dark);
