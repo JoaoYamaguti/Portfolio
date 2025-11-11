@@ -1,0 +1,52 @@
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+
+  & ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    & li {
+      inline-size: 16.5rem;
+      block-size: 10rem;
+
+      border-radius: 8px;
+
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      & .slider {
+        inline-size: 100%;
+        block-size: 100%;
+
+        padding: 0.5rem;
+
+        background-color: var(--color-surface-opaque);
+
+        transform: translateY(7.5rem);
+        transition: 300ms;
+
+        .description {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 1rem;
+        }
+      }
+
+      &:hover {
+        & .slider {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

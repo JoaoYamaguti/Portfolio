@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import FooterComponent from '@/Components/FooterComponent.vue'
-import PortfolioComponent from '@/Components/PortfolioComponent.vue'
 import ProfileBanner from '@/Components/ProfileBannerComponent.vue'
+import ProjectsComponent from '@/Components/ProjectsComponent.vue'
 import SchemaMenu from '@/Components/SchemaMenuComponent.vue'
 import StacksComponent from '@/Components/StacksComponent.vue'
 </script>
@@ -12,7 +12,7 @@ import StacksComponent from '@/Components/StacksComponent.vue'
     <main>
       <ProfileBanner />
       <StacksComponent />
-      <PortfolioComponent />
+      <ProjectsComponent />
     </main>
     <FooterComponent />
   </div>

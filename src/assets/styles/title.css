@@ -21,6 +21,7 @@
         to right,
         var(--color-primary),
         var(--color-primary),
+        var(--color-primary),
         transparent,
         transparent
       );
