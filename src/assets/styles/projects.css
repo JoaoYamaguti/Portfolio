@@ -5,20 +5,22 @@
 
   & ul {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     list-style: none;
 
     & li {
-      inline-size: 16.5rem;
-      block-size: 10rem;
+      inline-size: 100%;
+      block-size: calc(12rem + 4vw);
 
       border-radius: 8px;
 
       background-position: center center;
-      background-size: cover;
       background-repeat: no-repeat;
+
+      background-color: lightslategray;
 
       overflow: hidden;
 
@@ -32,7 +34,7 @@
 
         background-color: var(--color-surface-opaque);
 
-        transform: translateY(7.5rem);
+        transform: translateY(83%);
         transition: 300ms;
 
         .description {
@@ -45,6 +47,35 @@
       &:hover {
         & .slider {
           transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+@media (width > 48rem) {
+  .projects {
+    & ul {
+      flex-flow: row wrap;
+      & li {
+        flex: 1 0 21.75rem;
+        max-inline-size: 37.75rem;
+        & .slider {
+          transform: translateY(83%);
+        }
+      }
+    }
+  }
+}
+
+@media (width > 1130px) {
+  .projects {
+    & ul {
+      & li {
+        flex: 1 0 32.2%;
+        max-inline-size: 32.2%;
+        & .slider {
+          transform: translateY(85%);
         }
       }
     }

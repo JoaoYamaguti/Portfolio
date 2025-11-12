@@ -20,3 +20,9 @@ body {
     max-inline-size: 48rem;
   }
 }
+
+@media (width > 48rem) {
+  .container {
+    max-inline-size: 80rem;
+  }
+}
