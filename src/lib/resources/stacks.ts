@@ -1,7 +1,7 @@
 export const stacks = [
   {
     name: 'HTML 5',
-    icon: '/icons/HTML5Logo.png',
+    icon: '/icons/HTML5Logo.svg',
   },
   {
     name: 'CSS 3',
@@ -13,11 +13,19 @@ export const stacks = [
   },
   {
     name: 'Typescript',
-    icon: '/icons/tsLogo.png',
+    icon: '/icons/tsLogo.svg',
   },
   {
     name: 'Node.js',
     icon: '/icons/nodejsLogo.png',
+  },
+  {
+    name: 'React',
+    icon: '/icons/reactLogo.svg',
+  },
+  {
+    name: 'Vue.js',
+    icon: '/icons/vueLogo.svg',
   },
   {
     name: 'C#',

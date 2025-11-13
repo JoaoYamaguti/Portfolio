@@ -1,5 +1,5 @@
 export const contentEn = {
-  welcome: "Hello, I'm João! Welcome to my portfolio.",
+  welcome: "Hey there! I'm João. Welcome to my portfolio",
   description:
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas porro quos incidunt quasi corporis velit! Quidem aliquid libero laudantium nostrum, sed illo quo vero recusandae minima voluptates neque ipsam dolorem!',
+    'Mechanical Engineer transitioning to the technology field, with a focus on Fullstack development. Combining technical reasoning, experience in complex projects within the automotive sector, and an expanding role in digital solutions, I aim to develop applications that apply best practices, code quality, and scalability principles. I seek opportunities to contribute to innovative projects, collaborate within teams, and continuously enhance my skills.',
 }
