@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { inject } from 'vue'
 import TitleComponent from './TitleComponent.vue'
-import { projects } from '@/lib/resources/projects'
+import type { IContent } from '@/lib/interfaces/IContent'
+
+const content = inject<IContent>('content')
 </script>
 
 <template>
@@ -8,7 +11,7 @@ import { projects } from '@/lib/resources/projects'
     <TitleComponent title="Projects" />
     <ul>
       <li
-        v-for="(project, index) in projects"
+        v-for="(project, index) in content?.projects.list"
         :key="index"
         :style="{ 'background-image': 'url(' + project.backgroundImage + ')' }"
       >
