@@ -6,12 +6,10 @@ export interface IContent {
   }
   projects: {
     title: string
-    list: [
-      {
-        name: string
-        description: string
-        backgroundImage: string
-      },
-    ]
+    list: {
+      name: string
+      description: string
+      backgroundImage: string
+    }[]
   }
 }
