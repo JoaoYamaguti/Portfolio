@@ -5,7 +5,7 @@
 
     margin-top: 0.3rem;
 
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
   }
 }
 
@@ -19,9 +19,9 @@
 
       background-image: linear-gradient(
         to right,
-        var(--color-primary),
-        var(--color-primary),
-        var(--color-primary),
+        var(--color-accent),
+        var(--color-accent),
+        var(--color-accent),
         transparent,
         transparent
       );

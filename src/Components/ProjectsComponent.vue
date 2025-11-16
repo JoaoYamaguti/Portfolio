@@ -17,7 +17,9 @@ const content = inject<IContent>('content')
       >
         <div class="slider">
           <div class="description">
-            <h3>{{ project.name }}</h3>
+            <a :href="project.link" target="_blank">
+              <h3>{{ project.name }}</h3>
+            </a>
             <p>{{ project.description }}</p>
           </div>
         </div>

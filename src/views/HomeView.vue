@@ -3,6 +3,7 @@ import FooterComponent from '@/Components/FooterComponent.vue'
 import ProfileBanner from '@/Components/ProfileBannerComponent.vue'
 import ProjectsComponent from '@/Components/ProjectsComponent.vue'
 import SchemaMenu from '@/Components/SchemaMenuComponent.vue'
+import SocialmediasComponent from '@/Components/SocialmediasComponent.vue'
 import StacksComponent from '@/Components/StacksComponent.vue'
 </script>
 
@@ -13,6 +14,7 @@ import StacksComponent from '@/Components/StacksComponent.vue'
       <ProfileBanner />
       <StacksComponent />
       <ProjectsComponent />
+      <SocialmediasComponent />
     </main>
     <FooterComponent />
   </div>

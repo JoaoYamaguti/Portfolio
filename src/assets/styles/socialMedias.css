@@ -1,0 +1,82 @@
+.socialMedias {
+  & ul {
+    margin-top: 1.5rem;
+
+    list-style: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+
+    & li {
+      inline-size: 100%;
+
+      & a {
+        --padding: 0.75rem;
+        inline-size: 100%;
+
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        padding: var(--padding);
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--padding);
+
+        font-weight: 500;
+        color: var(--color-text-dark) !important;
+        text-decoration: none;
+
+        transition: all 300ms;
+        & span {
+          flex: 1 0 0;
+        }
+      }
+    }
+  }
+
+  & .LinkedIn {
+    background-color: var(--color-linkedin);
+    &:hover {
+      background-color: var(--color-linkedin-hover);
+    }
+  }
+  & .Github {
+    background-color: var(--color-github);
+    &:hover {
+      background-color: var(--color-github-hover);
+    }
+  }
+  & .Email {
+    background-color: var(--color-email);
+    &:hover {
+      background-color: var(--color-email-hover);
+    }
+  }
+  & .WhatsApp {
+    background-color: var(--color-whatsapp);
+    &:hover {
+      background-color: var(--color-whatsapp-hover);
+    }
+  }
+  & .Instagram {
+    background-image: var(--color-instagram-gradient);
+    &:hover {
+      background-image: var(--color-instagram-gradient-hover);
+    }
+  }
+}
+
+@media (width > 48rem) {
+  .socialMedias {
+    & ul {
+      & li {
+        max-inline-size: 15rem;
+      }
+    }
+  }
+}

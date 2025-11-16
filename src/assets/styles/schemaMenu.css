@@ -1,8 +1,7 @@
 header {
   inline-size: 100%;
 
-  border-bottom: solid 1px var(--color-hover);
-  padding-bottom: 0.7rem;
+  padding: 0.7rem 0;
 
   display: flex;
   flex-flow: row nowrap;
@@ -58,23 +57,15 @@ header {
 
     background-color: var(--color-surface);
 
+    cursor: pointer;
+
     &:hover {
       background-color: var(--color-hover);
     }
 
-    cursor: pointer;
-
     & option {
       padding: 0.1rem 0.4rem;
     }
-  }
-
-  @media (width > 30rem) {
-    header {
-      justify-content: flex-end;
-    }
-  }
-  @media (min-width: 48rem) {
   }
 
   .langSelect2 {
@@ -112,5 +103,10 @@ header {
     & ul {
       display: none;
     }
+  }
+}
+@media (width > 48rem) {
+  header {
+    justify-content: flex-end;
   }
 }

@@ -1,4 +1,5 @@
 export interface IContent {
+  hello: string
   welcome: string
   description: string
   stacks: {
@@ -10,6 +11,8 @@ export interface IContent {
       name: string
       description: string
       backgroundImage: string
+      link: string
     }[]
   }
+  socialMediasTitle: string
 }

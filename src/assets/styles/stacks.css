@@ -1,7 +1,7 @@
 .stacks {
   display: flex;
   flex-flow: column nowrap;
-  gap: 2rem;
+  gap: 1.5rem;
 
   & ul {
     display: flex;
@@ -50,7 +50,7 @@
 
 @media (width > 45rem) {
   .stacks {
-    gap: 2.5rem;
+    gap: 1.5rem;
     & ul {
       & li {
         padding-bottom: 0;

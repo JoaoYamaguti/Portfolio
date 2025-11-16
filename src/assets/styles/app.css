@@ -2,7 +2,7 @@
 @import './themes.css';
 
 body {
-  padding: 1rem;
+  padding: 0 1rem;
   background-color: var(--color-background);
 }
 
@@ -11,8 +11,6 @@ body {
 
   margin: auto;
   border-radius: 6px;
-
-  background-color: var(--color-surface);
 }
 
 @media (width > 30rem) {

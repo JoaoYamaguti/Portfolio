@@ -7,4 +7,12 @@ export const themes = [
     key: 'dark',
     label: 'Dark',
   },
+  {
+    key: 'nordDark',
+    label: 'Nord Dark',
+  },
+  {
+    key: 'dracula',
+    label: 'Dracula',
+  },
 ]

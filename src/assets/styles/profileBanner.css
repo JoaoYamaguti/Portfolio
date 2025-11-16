@@ -38,12 +38,18 @@
 
 @media (width > 48rem) {
   .profileBanner {
+    flex-flow: row nowrap;
+    gap: 2rem;
     & img {
-      max-inline-size: 12rem;
+      max-inline-size: 18rem;
     }
 
     & .description {
-      max-inline-size: 30rem;
+      flex: 1 0 0;
+
+      & h2 {
+        text-align: start;
+      }
     }
   }
 }

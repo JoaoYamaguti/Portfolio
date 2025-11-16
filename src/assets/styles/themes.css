@@ -1,21 +1,72 @@
 :root {
-  --color-background-light: #f7f8fa;
-  --color-background-dark: #1e1f22;
+  --color-primary: #ffa200;
+
+  --color-linkedin: rgb(10, 102, 194);
+  --color-linkedin-hover: rgb(7, 75, 143);
+  --color-github: rgb(13, 17, 23);
+  --color-github-hover: rgb(1, 4, 9);
+  --color-email: rgb(182, 52, 41);
+  --color-email-hover: rgb(131, 37, 29);
+  --color-whatsapp: rgb(23, 139, 71);
+  --color-whatsapp-hover: rgb(14, 87, 44);
+  --color-instagram-gradient: linear-gradient(
+    to right,
+    rgb(211, 0, 197),
+    rgb(254, 1, 107),
+    rgb(255, 84, 33),
+    rgb(255, 201, 0)
+  );
+  --color-instagram-gradient-hover: linear-gradient(
+    to right,
+    rgb(160, 0, 149),
+    rgb(203, 0, 85),
+    rgb(204, 67, 26),
+    rgb(204, 160, 0)
+  );
+
+  /* --color-background-light: #f7f8fa;
   --color-surface-light: #f2f3f5;
   --color-surface-light-opaque: #f2f3f5da;
+  --color-hover-light: #d4d4d4;
+  --color-text-light: #2e2e2e;
+  --color-accent-light: #ffa200;
+  --color-warning-light: #ffdfa3;
+  --color-success-light: #c8e8c7; */
+  --color-background-light: #f7f4ef; /* bege bem claro */
+  --color-surface-light: #f2eee8; /* bege suave */
+  --color-surface-light-opaque: #f2eee8da;
+  --color-hover-light: #e3dfd7; /* hover mais escuro */
+  --color-text-light: #2e2b26; /* marrom grafite */
+  --color-accent-light: #d89c37; /* dourado/bege acentuado */
+  --color-warning-light: #f4e2b9; /* bege amarelado suave */
+  --color-success-light: #cfe6cf;
+
+  --color-background-dark: #1e1f22;
   --color-surface-dark: #242528;
   --color-surface-dark-opaque: #242528de;
-  --color-hover-light: #d4d4d4;
   --color-hover-dark: #34363a;
-  --color-text-light: #2e2e2e;
   --color-text-dark: #e6e7eb;
-  --color-primary: #ffa200;
-  --color-accent-light: #f6c7d0;
-  --color-accent-dark: #f0b6c0;
-  --color-warning-light: #ffdfa3;
+  --color-accent-dark: #ffa200;
   --color-warning-dark: #ffcd82;
-  --color-success-light: #c8e8c7;
   --color-success-dark: #b5ddb4;
+
+  --color-background-nordDark: #2e3440;
+  --color-surface-nordDark: #3b4252;
+  --color-surface-nordDark-opaque: #3b4252dd;
+  --color-hover-nordDark: #434c5e;
+  --color-text-nordDark: #eceff4;
+  --color-accent-nordDark: #88c0d0; /* ciano característico Nord */
+  --color-warning-nordDark: #ebcb8b;
+  --color-success-nordDark: #a3be8c;
+
+  --color-background-dracula: #282a36;
+  --color-surface-dracula: #343746;
+  --color-surface-dracula-opaque: #343746de;
+  --color-hover-dracula: #44475a;
+  --color-text-dracula: #f8f8f2;
+  --color-accent-dracula: #ff79c6; /* Pink */
+  --color-warning-dracula: #f1fa8c; /* Yellow */
+  --color-success-dracula: #50fa7b; /* Green */
 }
 
 body.light {
@@ -28,6 +79,7 @@ body.light {
   --color-warning: var(--color-warning-light);
   --color-success: var(--color-success-light);
 }
+
 body.dark {
   --color-background: var(--color-background-dark);
   --color-surface: var(--color-surface-dark);
@@ -37,4 +89,26 @@ body.dark {
   --color-accent: var(--color-accent-dark);
   --color-warning: var(--color-warning-dark);
   --color-success: var(--color-success-dark);
+}
+
+body.nordDark {
+  --color-background: var(--color-background-nordDark);
+  --color-surface: var(--color-surface-nordDark);
+  --color-surface-opaque: var(--color-surface-nordDark-opaque);
+  --color-hover: var(--color-hover-nordDark);
+  --color-text: var(--color-text-nordDark);
+  --color-accent: var(--color-accent-nordDark);
+  --color-warning: var(--color-warning-nordDark);
+  --color-success: var(--color-success-nordDark);
+}
+
+body.dracula {
+  --color-background: var(--color-background-dracula);
+  --color-surface: var(--color-surface-dracula);
+  --color-surface-opaque: var(--color-surface-dracula-opaque);
+  --color-hover: var(--color-hover-dracula);
+  --color-text: var(--color-text-dracula);
+  --color-accent: var(--color-accent-dracula);
+  --color-warning: var(--color-warning-dracula);
+  --color-success: var(--color-success-dracula);
 }
