@@ -1,3 +1,24 @@
+@keyframes writerPosition {
+  0% {
+    background-color: var(--color-surface);
+  }
+  1% {
+    background-color: var(--color-text);
+  }
+  51% {
+    background-color: var(--color-text);
+  }
+  52% {
+    background-color: var(--color-surface);
+  }
+  99% {
+    background-color: var(--color-surface);
+  }
+  to {
+    background-color: var(--color-surface);
+  }
+}
+
 .profileBanner {
   max-inline-size: 100%;
 
@@ -23,13 +44,26 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 0.8rem;
+
+    & h2 {
+      display: inline;
+      font-size: calc(1.8rem + 0.2vw);
+      font-family: var(--font-cursive);
+      text-align: center;
+    }
+
+    & div {
+      inline-size: 0.7rem;
+      block-size: 0.2rem;
+
+      margin-inline-start: 0.3rem;
+
+      background-color: var(--color-text);
+
+      animation: writerPosition 1300ms linear 0s infinite normal;
+    }
   }
 
-  & h2 {
-    font-size: calc(1.8rem + 0.2vw);
-    font-family: var(--font-cursive);
-    text-align: center;
-  }
   & p {
     font-size: calc(1rem + 0.2vw);
     line-height: calc(1.5rem + 0.2vw);

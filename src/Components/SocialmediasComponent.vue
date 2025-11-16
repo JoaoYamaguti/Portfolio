@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { socialMedias } from '@/lib/resources/socialMedias'
-import TitleComponent from './TitleComponent.vue'
 import { inject } from 'vue'
 import type { IContent } from '@/lib/interfaces/IContent'
+import TitleComponent from '@/components/TitleComponent.vue'
 
 const content = inject<IContent>('content')
 </script>
