@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { inject } from 'vue'
-import TitleComponent from '@/components/TitleComponent.vue'
+import TitleComponent from '@/Components/TitleComponent.vue'
 import type { IContent } from '@/lib/interfaces/IContent'
 
 const content = inject<IContent>('content')

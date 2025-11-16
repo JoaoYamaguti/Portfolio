@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { stacks } from '@/lib/resources/stacks'
-import TitleComponent from '@/components/TitleComponent.vue'
+import TitleComponent from '@/Components/TitleComponent.vue'
 </script>
 
 <template>

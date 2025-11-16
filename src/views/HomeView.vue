@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import FooterComponent from '../components/FooterComponent.vue'
-import ProfileBanner from '../components/ProfileBannerComponent.vue'
-import ProjectsComponent from '../components/ProjectsComponent.vue'
-import SchemaMenu from '../components/SchemaMenuComponent.vue'
-import SocialmediasComponent from '../components/SocialmediasComponent.vue'
-import StacksComponent from '../components/StacksComponent.vue'
+import FooterComponent from '@/Components/FooterComponent.vue'
+import ProfileBanner from '@/Components/ProfileBannerComponent.vue'
+import ProjectsComponent from '../Components/ProjectsComponent.vue'
+import SchemaMenu from '@/Components/SchemaMenuComponent.vue'
+import SocialmediasComponent from '@/Components/SocialmediasComponent.vue'
+import StacksComponent from '@/Components/StacksComponent.vue'
 </script>
 
 <template>

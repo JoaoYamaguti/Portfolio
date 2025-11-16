@@ -2,7 +2,7 @@
 import { socialMedias } from '@/lib/resources/socialMedias'
 import { inject } from 'vue'
 import type { IContent } from '@/lib/interfaces/IContent'
-import TitleComponent from '@/components/TitleComponent.vue'
+import TitleComponent from '@/Components/TitleComponent.vue'
 
 const content = inject<IContent>('content')
 </script>
