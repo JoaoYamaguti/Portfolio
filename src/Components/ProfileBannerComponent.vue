@@ -1,42 +1,54 @@
 <script setup lang="ts">
 import type { IContent } from '@/lib/interfaces/IContent'
+import { contentEn } from '@/lib/resources/content_en'
 import { profilePicture } from '@/lib/resources/profilePicture'
-import { inject } from 'vue'
+import { inject, onMounted, ref, watch, type Ref } from 'vue'
 
-const content = inject<IContent>('content')
+const content = inject<Ref<IContent>>('content', ref(contentEn))
 
-// const welcomeMessage = ref<string>('')
+const welcomeMessage = ref<string>('')
 
-// const welcomeWriter = () => {
-//   let counter = 0
-//   const timer = setInterval(() => {
-//     console.log(welcomeMessage.value)
-//     console.log(counter)
+let writerTimer = setInterval(() => {}, 0)
 
-//     if (!content?.hello) return
-//     welcomeMessage.value += content?.hello[counter] || ''
+const stopWelcomeTimer = (timer: number) => {
+  clearInterval(timer)
+}
 
-//     counter++
-//   }, 700)
+const writeWelcomeMessage = () => {
+  let counter = 0
 
-//   if (!content?.hello || counter == content?.hello.length - 1) clearInterval(timer)
-// }
+  welcomeMessage.value = ''
 
-// welcomeWriter()
+  stopWelcomeTimer(writerTimer)
+
+  writerTimer = setInterval(() => {
+    console.log(welcomeMessage.value)
+    console.log(counter)
+
+    if (!content.value.welcome) return
+    welcomeMessage.value += content.value.welcome[counter] || ''
+
+    counter++
+
+    if (!content.value.welcome || counter == content.value.welcome.length)
+      stopWelcomeTimer(writerTimer)
+  }, 100)
+}
+
+watch(content, writeWelcomeMessage)
+
+onMounted(writeWelcomeMessage)
 </script>
 
 <template>
   <div class="profileBanner">
     <img :src="profilePicture" alt="Profile Picture" loading="eager" />
     <div class="description">
-      <!-- <h2>{{ welcomeMessage }}</h2> -->
       <h2>
-        {{ content?.welcome }}
+        {{ welcomeMessage }}
         <span>_</span>
       </h2>
-
-      <!-- <h2>{{ content?.welcome }}</h2> -->
-      <p>{{ content?.description }}</p>
+      <p>{{ content.description }}</p>
     </div>
   </div>
 </template>
