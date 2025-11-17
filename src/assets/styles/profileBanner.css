@@ -1,21 +1,27 @@
 @keyframes writerPosition {
   0% {
-    background-color: var(--color-surface);
+    opacity: 0;
+    /* background-color: var(--color-surface); */
   }
   1% {
-    background-color: var(--color-text);
+    opacity: 1;
+    /* background-color: var(--color-text); */
   }
   51% {
-    background-color: var(--color-text);
+    opacity: 1;
+    /* background-color: var(--color-text); */
   }
   52% {
-    background-color: var(--color-surface);
+    opacity: 0;
+    /* background-color: var(--color-surface); */
   }
   99% {
-    background-color: var(--color-surface);
+    opacity: 0;
+    /* background-color: var(--color-surface); */
   }
   to {
-    background-color: var(--color-surface);
+    opacity: 0;
+    /* background-color: var(--color-surface); */
   }
 }
 
@@ -50,17 +56,11 @@
       font-size: calc(1.8rem + 0.2vw);
       font-family: var(--font-cursive);
       text-align: center;
-    }
 
-    & div {
-      inline-size: 0.7rem;
-      block-size: 0.2rem;
-
-      margin-inline-start: 0.3rem;
-
-      background-color: var(--color-text);
-
-      animation: writerPosition 1300ms linear 0s infinite normal;
+      & span {
+        margin-inline-start: -0.5rem;
+        animation: writerPosition 1300ms linear 0s infinite normal;
+      }
     }
   }
 

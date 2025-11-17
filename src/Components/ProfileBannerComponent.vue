@@ -32,7 +32,7 @@ const content = inject<IContent>('content')
       <!-- <h2>{{ welcomeMessage }}</h2> -->
       <h2>
         {{ content?.welcome }}
-        <!-- <div></div> -->
+        <span>_</span>
       </h2>
 
       <!-- <h2>{{ content?.welcome }}</h2> -->
