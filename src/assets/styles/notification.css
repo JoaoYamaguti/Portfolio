@@ -1,0 +1,66 @@
+@keyframes showNotification {
+  0% {
+    top: -3%;
+  }
+
+  10% {
+    top: 3%;
+  }
+
+  90% {
+    top: 3%;
+  }
+
+  100% {
+    top: -6%;
+  }
+}
+
+.notification {
+  position: fixed;
+
+  border: solid 1px var(--color-hover);
+  border-radius: 4px;
+
+  inline-size: 18rem;
+  /* top: 3%; */
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: var(--color-background-notification);
+
+  animation: showNotification 2900ms linear 0s forwards;
+
+  & div.content {
+    inline-size: 100%;
+
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+      color: var(--color-text-notification);
+    }
+    & i {
+      cursor: pointer;
+    }
+  }
+
+  & div.status {
+    inline-size: 100%;
+    block-size: 3px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  & .ok {
+    background-color: green;
+  }
+  & .alert {
+    background-color: yellow;
+  }
+  & .warning {
+    background-color: red;
+  }
+}

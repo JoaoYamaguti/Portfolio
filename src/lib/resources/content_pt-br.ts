@@ -10,14 +10,14 @@ export const contentPtBr = {
     title: 'Projects',
     list: [
       {
-        name: 'Uxcomex Test',
+        name: 'Teste Uxcomex',
         description:
           'Este projeto é um teste para o processo seletivo da empresa UXComex para a vaga de Analista Desenvolvedor Jr.',
         backgroundImage: 'images/uxcomexScreen.png',
         link: 'https://github.com/JoaoYamaguti/UXComexTest',
       },
       {
-        name: 'ChatApp Test',
+        name: 'Teste ChatApp',
         description:
           'Inicialmente este projeto nasceu para ser um teste, onde o projeto basicamente consiste em um chat para troca de mensagens entre os usuários.',
         backgroundImage: 'images/chatappScreen.png',
@@ -40,4 +40,5 @@ export const contentPtBr = {
     ],
   },
   socialMediasTitle: 'Medias Sociais',
+  EmailCopiedMessage: 'Email copiado para a área de transferência.',
 }

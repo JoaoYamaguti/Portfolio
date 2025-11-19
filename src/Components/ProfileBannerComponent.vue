@@ -22,9 +22,6 @@ const writeWelcomeMessage = () => {
   stopWelcomeTimer(writerTimer)
 
   writerTimer = setInterval(() => {
-    console.log(welcomeMessage.value)
-    console.log(counter)
-
     if (!content.value.welcome) return
     welcomeMessage.value += content.value.welcome[counter] || ''
 

@@ -15,4 +15,5 @@ export interface IContent {
     }[]
   }
   socialMediasTitle: string
+  EmailCopiedMessage: string
 }

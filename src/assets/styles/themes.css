@@ -23,6 +23,8 @@
     rgb(204, 67, 26),
     rgb(204, 160, 0)
   );
+  --color-background-notification: var(--color-background-dark);
+  --color-text-notification: var(--color-text-dark);
 
   /* --color-background-light: #f7f8fa;
   --color-surface-light: #f2f3f5;
@@ -100,6 +102,7 @@ body.nordDark {
   --color-accent: var(--color-accent-nordDark);
   --color-warning: var(--color-warning-nordDark);
   --color-success: var(--color-success-nordDark);
+  --color-background-notification: var(--color-background);
 }
 
 body.dracula {
@@ -111,4 +114,5 @@ body.dracula {
   --color-accent: var(--color-accent-dracula);
   --color-warning: var(--color-warning-dracula);
   --color-success: var(--color-success-dracula);
+  --color-background-notification: var(--color-background);
 }

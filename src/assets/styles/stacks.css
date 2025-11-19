@@ -22,7 +22,6 @@
       align-items: center;
       & img {
         inline-size: 64px;
-        z-index: 1;
         filter: grayscale(0);
         transition: 300ms;
       }
@@ -57,7 +56,6 @@
 
         & img {
           inline-size: 64px;
-          z-index: 1;
           filter: grayscale(1);
           transition: 300ms;
         }

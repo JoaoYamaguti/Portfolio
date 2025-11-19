@@ -40,4 +40,5 @@ export const contentEn = {
     ],
   },
   socialMediasTitle: 'Social Medias',
+  EmailCopiedMessage: 'Email copied to clipboard.',
 }

@@ -1,10 +1,25 @@
 <script setup lang="ts">
 import { socialMedias } from '@/lib/resources/socialMedias'
-import { inject } from 'vue'
+import { inject, ref, type Ref } from 'vue'
 import type { IContent } from '@/lib/interfaces/IContent'
 import TitleComponent from '@/Components/TitleComponent.vue'
+import { NotificationStatusType } from '@/lib/Enums/NotificationStatusType'
+import { contentEn } from '@/lib/resources/content_en'
 
-const content = inject<IContent>('content')
+const content = inject<Ref<IContent>>('content', ref(contentEn))
+
+const nofitication = inject<{
+  showNotification: (status: NotificationStatusType, description: string) => void
+}>('notification')
+
+const copyToClipboard = async (text: string) => {
+  try {
+    await navigator.clipboard.writeText(text)
+    nofitication?.showNotification(NotificationStatusType.ok, content.value.EmailCopiedMessage)
+  } catch (error) {
+    console.log(error)
+  }
+}
 </script>
 
 <template>
@@ -12,12 +27,21 @@ const content = inject<IContent>('content')
     <TitleComponent :title="content?.socialMediasTitle" />
     <ul>
       <li v-for="(media, index) in socialMedias" :key="index">
-        <a :href="media.link" :class="media.name" target="_blank">
+        <a v-if="media.name !== 'Email'" :href="media.link" :class="media.name" target="_blank">
           <i :class="'pi ' + media.icon"></i>
           <span>{{ media.name }}</span>
-          <i v-if="media.name == 'Email'" class="pi pi-copy"></i>
-          <i v-else class="pi pi-link"></i>
+          <i class="pi pi-link"></i>
         </a>
+        <button
+          v-if="media.name == 'Email'"
+          :class="media.name"
+          target="_blank"
+          @click="copyToClipboard(media.link)"
+        >
+          <i :class="'pi ' + media.icon"></i>
+          <span>{{ media.name }}</span>
+          <i class="pi pi-copy"></i>
+        </button>
       </li>
     </ul>
   </div>
