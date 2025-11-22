@@ -11,33 +11,104 @@ export const contentEn = {
     list: [
       {
         name: 'Uxcomex Test',
+        status: 'Finished',
         description:
           'This project is a test for the selection process of the company UXComex for the Junior Developer Analyst position.',
         backgroundImage: 'images/uxcomexScreen.png',
-        link: 'https://github.com/JoaoYamaguti/UXComexTest',
+        repository: 'https://github.com/JoaoYamaguti/UXComexTest',
+        link: '',
+        technologies: [
+          {
+            title: 'Frontend',
+            technologiesFrontend: [],
+          },
+          {
+            title: 'Backend',
+            technologiesBackend: [],
+          },
+          {
+            title: 'MVC',
+            technologiesMVC: ['/icons/CSharpLogo.png'],
+          },
+        ],
       },
       {
         name: 'ChatApp Test',
+        status: 'Finished',
         description:
           'This project initially started as a test, where the application basically consists of a chat for message exchange between users.',
         backgroundImage: 'images/chatappScreen.png',
-        link: 'https://github.com/JoaoYamaguti/chatApp-Frontend',
+        repository: 'https://github.com/JoaoYamaguti/chatApp-Frontend',
+        link: '',
+        technologies: [
+          {
+            title: 'Frontend',
+            icons: ['/icons/tsLogo.svg', '/icons/nodejsLogo.png', '/icons/vueLogo.svg'],
+          },
+          {
+            title: 'Backend',
+            icons: ['/icons/rubyLogo.svg'],
+          },
+          {
+            title: 'MVC',
+            icons: [],
+          },
+        ],
       },
       {
         name: 'Easy Training',
+        status: 'In Progress...',
         description:
           'A project that uses AI to create customized workout routines based on the user’s goals and fitness level.',
         backgroundImage: 'images/easytrainingScreen.png',
-        link: 'https://github.com/JoaoYamaguti/easytraining',
+        repository: 'https://github.com/JoaoYamaguti/easytraining',
+        link: '',
+        technologies: [
+          {
+            title: 'Frontend',
+            icons: [
+              '/icons/tsLogo.svg',
+              '/icons/nodejsLogo.png',
+              '/icons/reactLogo.svg',
+              '/icons/nextjsLogo.svg',
+            ],
+          },
+          {
+            title: 'Backend',
+            icons: ['/icons/nodejsLogo.png', '/icons/nestjsLogo.png'],
+          },
+          {
+            title: 'MVC',
+            icons: [],
+          },
+        ],
       },
       {
         name: 'Intelli Finance',
+        status: 'In Progress...',
         description:
           'A project designed to help you manage your finances by allowing you to add expenses and set goals.',
         backgroundImage: 'images/intellifinanceScreen.png',
-        link: 'https://github.com/JoaoYamaguti/intelli_finance',
+        repository: 'https://github.com/JoaoYamaguti/intelli_finance',
+        link: '',
+        technologies: [
+          {
+            title: 'Frontend',
+            icons: ['/icons/tsLogo.svg', '/icons/nodejsLogo.png', '/icons/vueLogo.svg'],
+          },
+          {
+            title: 'Backend',
+            icons: [],
+          },
+          {
+            title: 'MVC',
+            icons: [],
+          },
+        ],
       },
     ],
+    repositoryLabel: 'Repository',
+    linkLabel: 'Access',
   },
   socialMediasTitle: 'Social Medias',
   EmailCopiedMessage: 'Email copied to clipboard.',

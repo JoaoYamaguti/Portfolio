@@ -9,10 +9,18 @@ export interface IContent {
     title: string
     list: {
       name: string
+      status: string
       description: string
       backgroundImage: string
+      repository: string
       link: string
+      technologies: {
+        title: string
+        icons: string[]
+      }[]
     }[]
+    repositoryLabel: string
+    linkLabel: string
   }
   socialMediasTitle: string
   EmailCopiedMessage: string

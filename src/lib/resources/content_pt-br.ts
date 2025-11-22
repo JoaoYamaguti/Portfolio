@@ -11,33 +11,43 @@ export const contentPtBr = {
     list: [
       {
         name: 'Teste Uxcomex',
+        status: 'Concluído',
         description:
           'Este projeto é um teste para o processo seletivo da empresa UXComex para a vaga de Analista Desenvolvedor Jr.',
         backgroundImage: 'images/uxcomexScreen.png',
-        link: 'https://github.com/JoaoYamaguti/UXComexTest',
+        repository: 'https://github.com/JoaoYamaguti/UXComexTest',
+        link: '',
       },
       {
         name: 'Teste ChatApp',
+        status: 'Concluído',
         description:
           'Inicialmente este projeto nasceu para ser um teste, onde o projeto basicamente consiste em um chat para troca de mensagens entre os usuários.',
         backgroundImage: 'images/chatappScreen.png',
-        link: 'https://github.com/JoaoYamaguti/chatApp-Frontend',
+        repository: 'https://github.com/JoaoYamaguti/chatApp-Frontend',
+        link: '',
       },
       {
         name: 'Easy Training',
+        status: 'Em Progresso...',
         description:
           'Um projeto que utiliza IA para criar rotinas de treino personalizadas de acordo com os objetivos e nível de condicionamento do usuário.',
         backgroundImage: 'images/easytrainingScreen.png',
-        link: 'https://github.com/JoaoYamaguti/easytraining',
+        repository: 'https://github.com/JoaoYamaguti/easytraining',
+        link: '',
       },
       {
         name: 'Intelli Finance',
+        status: 'Em Progresso...',
         description:
           'Um projeto com o intuito de te ajudar a controlar suas finanças, podendo adicionar despesas e metas.',
         backgroundImage: 'images/intellifinanceScreen.png',
+        repository: '',
         link: '',
       },
     ],
+    repositoryLabel: 'Repositorio',
+    linkLabel: 'Acesse',
   },
   socialMediasTitle: 'Medias Sociais',
   EmailCopiedMessage: 'Email copiado para a área de transferência.',

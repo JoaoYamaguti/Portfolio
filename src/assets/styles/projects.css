@@ -1,9 +1,8 @@
 .projects {
-  & ul {
+  & ul.projectsForDesktop {
     margin-top: 1.5rem;
-
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
@@ -13,6 +12,9 @@
       inline-size: 100%;
       block-size: calc(12rem + 4vw);
 
+      flex: 1 0 21.5rem;
+      max-inline-size: 48rem;
+
       box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
 
@@ -20,13 +22,36 @@
       background-size: cover;
       background-repeat: no-repeat;
 
-      background-color: lightslategray;
-
       overflow: hidden;
 
       cursor: pointer;
 
       & a {
+        text-decoration: none;
+      }
+
+      & .title {
+        display: flex;
+        justify-content: space-between;
+
+        & span {
+          border-radius: 8px;
+          padding: 0 0.3rem;
+
+          display: flex;
+          align-items: center;
+
+          color: var(--color-text-light);
+          font-weight: 500;
+          font-size: 0.8rem;
+        }
+
+        & .finished {
+          background-color: var(--color-success);
+        }
+        & .inProgress {
+          background-color: var(--color-warning);
+        }
       }
 
       & .slider {
@@ -40,6 +65,7 @@
         transform: translateY(83%);
         transition: 300ms;
 
+        text-decoration: none;
         .description {
           display: flex;
           flex-flow: column nowrap;
@@ -54,29 +80,110 @@
       }
     }
   }
-}
 
-@media (width > 48rem) {
-  .projects {
-    & ul {
-      flex-flow: row wrap;
-      & li {
-        flex: 1 0 21.75rem;
-        max-inline-size: 37.75rem;
-        & .slider {
-          transform: translateY(83%);
+  & ul.projectsForMobile {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+
+    & li {
+      inline-size: 100%;
+
+      box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 0.7rem;
+
+      & a {
+        text-decoration: none;
+      }
+
+      & .image {
+        inline-size: 100%;
+        block-size: 10rem;
+
+        padding: 0.5rem;
+
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        text-decoration: none;
+      }
+
+      & .description {
+        padding: 0.5rem;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        & .title {
+          display: flex;
+          justify-content: space-between;
+
+          & span {
+            border-radius: 8px;
+            padding: 0 0.3rem;
+
+            display: flex;
+            align-items: center;
+
+            color: var(--color-text-light);
+            font-weight: 500;
+            font-size: 0.8rem;
+          }
+
+          & .finished {
+            background-color: var(--color-success);
+          }
+          & .inProgress {
+            background-color: var(--color-warning);
+          }
+        }
+        & .links {
+          display: flex;
+          justify-content: space-between;
+
+          & a {
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+
+            background-color: var(--color-accent);
+
+            font-weight: 500;
+          }
         }
       }
     }
   }
 }
 
+@media (width < 48rem) {
+  .projects {
+    & ul.projectsForDesktop {
+      display: none;
+    }
+  }
+}
+
+@media (width >= 48rem) {
+  .projects {
+    & ul.projectsForMobile {
+      display: none;
+    }
+  }
+}
+
 @media (width > 1130px) {
   .projects {
-    & ul {
+    & ul.projectsForDesktop {
       & li {
-        flex: 1 0 32.2%;
-        max-inline-size: 32.2%;
+        max-inline-size: 32.5%;
         & .slider {
           transform: translateY(85%);
         }

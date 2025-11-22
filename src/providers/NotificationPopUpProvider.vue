@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { NotificationStatusType } from '@/lib/Enums/NotificationStatusType'
-import { provide, reactive } from 'vue'
+import { nextTick, provide, reactive } from 'vue'
 
 const notification = reactive({
-  show: true,
+  show: false,
   status: 'alert',
   description: 'nofitication created',
 })
@@ -16,17 +16,18 @@ const stopNotificationTimer = () => {
   clearTimeout(notificationTimer)
 }
 
-const showNotification = (status: NotificationStatusType, description: string) => {
-  notification.status = status
-  notification.description = description
-
+const showNotification = async (status: NotificationStatusType, description: string) => {
   stopNotificationTimer()
 
+  await nextTick()
+
+  notification.status = status
+  notification.description = description
   notification.show = true
 
   notificationTimer = setTimeout(() => {
     stopNotificationTimer()
-  }, 3000)
+  }, 4000)
 }
 
 provide('notification', {
