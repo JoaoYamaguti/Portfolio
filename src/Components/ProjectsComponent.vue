@@ -46,14 +46,14 @@ const content = inject<IContent>('content')
           </div>
           <p>{{ project.description }}</p>
           <div class="technologies">
-            <ul>
-              <li
-                v-for="(technology, index) in project.technologies"
-                :key="index"
-                :style="technology.icons ? 'display: none' : 'display:flex'"
-              >
+            <ul class="technologiesList">
+              <li v-for="(technology, index) in project.technologies" :key="index">
                 <h4>{{ technology.title }}</h4>
-                ``
+                <ul class="icons">
+                  <li v-for="(icon, index) in technology.icons" :key="index">
+                    <img :src="icon" alt="" loading="lazy" />
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

@@ -19,16 +19,8 @@ export const contentEn = {
         link: '',
         technologies: [
           {
-            title: 'Frontend',
-            technologiesFrontend: [],
-          },
-          {
-            title: 'Backend',
-            technologiesBackend: [],
-          },
-          {
             title: 'MVC',
-            technologiesMVC: ['/icons/CSharpLogo.png'],
+            icons: ['/icons/CSharpLogo.png'],
           },
         ],
       },
@@ -43,15 +35,16 @@ export const contentEn = {
         technologies: [
           {
             title: 'Frontend',
-            icons: ['/icons/tsLogo.svg', '/icons/nodejsLogo.png', '/icons/vueLogo.svg'],
+            icons: [
+              '/icons/tsLogo.svg',
+              '/icons/nodejsLogo.png',
+              '/icons/vueLogo.svg',
+              '/icons/vitejsLogo.png',
+            ],
           },
           {
             title: 'Backend',
-            icons: ['/icons/rubyLogo.svg'],
-          },
-          {
-            title: 'MVC',
-            icons: [],
+            icons: ['/icons/rubyLogo.png'],
           },
         ],
       },
@@ -70,16 +63,12 @@ export const contentEn = {
               '/icons/tsLogo.svg',
               '/icons/nodejsLogo.png',
               '/icons/reactLogo.svg',
-              '/icons/nextjsLogo.svg',
+              '/icons/nextjsLogo.png',
             ],
           },
           {
             title: 'Backend',
             icons: ['/icons/nodejsLogo.png', '/icons/nestjsLogo.png'],
-          },
-          {
-            title: 'MVC',
-            icons: [],
           },
         ],
       },
@@ -94,15 +83,12 @@ export const contentEn = {
         technologies: [
           {
             title: 'Frontend',
-            icons: ['/icons/tsLogo.svg', '/icons/nodejsLogo.png', '/icons/vueLogo.svg'],
-          },
-          {
-            title: 'Backend',
-            icons: [],
-          },
-          {
-            title: 'MVC',
-            icons: [],
+            icons: [
+              '/icons/tsLogo.svg',
+              '/icons/nodejsLogo.png',
+              '/icons/vueLogo.svg',
+              '/icons/vitejsLogo.png',
+            ],
           },
         ],
       },

@@ -1,3 +1,21 @@
+@import './themes.css';
+@import './globals.css';
+@import './app.css';
+
+@keyframes scrollTechnologiesIcons {
+  from {
+    transform: translateX(0);
+  }
+
+  85% {
+    transform: translateX(-10%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
 .projects {
   & ul.projectsForDesktop {
     margin-top: 1.5rem;
@@ -145,6 +163,67 @@
             background-color: var(--color-warning);
           }
         }
+
+        & p {
+        }
+
+        & .technologies {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+
+          overflow-x: scroll;
+          scrollbar-width: none;
+
+          & ul.technologiesList::-webkit-scrollbar {
+            animation: scrollTechnologiesIcons 2s linear infinite;
+          }
+
+          & ul.technologiesList {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            list-style: none;
+
+            & li:first-child {
+              border-left: none;
+              padding: 0 1rem 0 0;
+            }
+
+            & li {
+              box-shadow: none;
+              border-radius: 0;
+              border-left: solid 1px var(--color-hover);
+              padding: 0 1rem;
+
+              display: flex;
+              flex-flow: column nowrap;
+              align-items: start;
+              gap: 0.5rem;
+
+              & h4 {
+              }
+
+              & .icons {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: 1rem;
+
+                list-style: 0;
+                & li {
+                  border: none;
+                  padding: 0;
+                  & img {
+                    inline-size: 2rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+
         & .links {
           display: flex;
           justify-content: space-between;
