@@ -164,9 +164,6 @@
           }
         }
 
-        & p {
-        }
-
         & .technologies {
           display: flex;
           flex-flow: row nowrap;
@@ -174,10 +171,6 @@
 
           overflow-x: scroll;
           scrollbar-width: none;
-
-          & ul.technologiesList::-webkit-scrollbar {
-            animation: scrollTechnologiesIcons 2s linear infinite;
-          }
 
           & ul.technologiesList {
             display: flex;
@@ -201,9 +194,6 @@
               flex-flow: column nowrap;
               align-items: start;
               gap: 0.5rem;
-
-              & h4 {
-              }
 
               & .icons {
                 display: flex;

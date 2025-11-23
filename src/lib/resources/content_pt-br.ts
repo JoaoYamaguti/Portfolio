@@ -17,6 +17,12 @@ export const contentPtBr = {
         backgroundImage: 'images/uxcomexScreen.png',
         repository: 'https://github.com/JoaoYamaguti/UXComexTest',
         link: '',
+        technologies: [
+          {
+            title: 'MVC',
+            icons: ['/icons/CSharpLogo.png'],
+          },
+        ],
       },
       {
         name: 'Teste ChatApp',
@@ -26,6 +32,21 @@ export const contentPtBr = {
         backgroundImage: 'images/chatappScreen.png',
         repository: 'https://github.com/JoaoYamaguti/chatApp-Frontend',
         link: '',
+        technologies: [
+          {
+            title: 'Frontend',
+            icons: [
+              '/icons/tsLogo.svg',
+              '/icons/nodejsLogo.png',
+              '/icons/vueLogo.svg',
+              '/icons/vitejsLogo.png',
+            ],
+          },
+          {
+            title: 'Backend',
+            icons: ['/icons/rubyLogo.png'],
+          },
+        ],
       },
       {
         name: 'Easy Training',
@@ -35,6 +56,21 @@ export const contentPtBr = {
         backgroundImage: 'images/easytrainingScreen.png',
         repository: 'https://github.com/JoaoYamaguti/easytraining',
         link: '',
+        technologies: [
+          {
+            title: 'Frontend',
+            icons: [
+              '/icons/tsLogo.svg',
+              '/icons/nodejsLogo.png',
+              '/icons/reactLogo.svg',
+              '/icons/nextjsLogo.png',
+            ],
+          },
+          {
+            title: 'Backend',
+            icons: ['/icons/nodejsLogo.png', '/icons/nestjsLogo.png'],
+          },
+        ],
       },
       {
         name: 'Intelli Finance',
@@ -44,6 +80,17 @@ export const contentPtBr = {
         backgroundImage: 'images/intellifinanceScreen.png',
         repository: '',
         link: '',
+        technologies: [
+          {
+            title: 'Frontend',
+            icons: [
+              '/icons/tsLogo.svg',
+              '/icons/nodejsLogo.png',
+              '/icons/vueLogo.svg',
+              '/icons/vitejsLogo.png',
+            ],
+          },
+        ],
       },
     ],
     repositoryLabel: 'Repositorio',
