@@ -63,7 +63,7 @@
         .description {
           display: flex;
           flex-flow: column nowrap;
-          gap: 1rem;
+          gap: 2.5rem;
         }
       }
 
