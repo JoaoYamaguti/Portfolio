@@ -40,6 +40,11 @@
         & span {
           flex: 1 0 0;
         }
+
+        & span,
+        i {
+          color: var(--color-text-dark);
+        }
       }
     }
   }

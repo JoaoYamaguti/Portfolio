@@ -26,7 +26,7 @@
     gap: 1rem;
     list-style: none;
 
-    & li {
+    & li.project {
       inline-size: 100%;
       block-size: calc(12rem + 4vw);
 
@@ -48,30 +48,6 @@
         text-decoration: none;
       }
 
-      & .title {
-        display: flex;
-        justify-content: space-between;
-
-        & span {
-          border-radius: 8px;
-          padding: 0 0.3rem;
-
-          display: flex;
-          align-items: center;
-
-          color: var(--color-text-light);
-          font-weight: 500;
-          font-size: 0.8rem;
-        }
-
-        & .finished {
-          background-color: var(--color-success);
-        }
-        & .inProgress {
-          background-color: var(--color-warning);
-        }
-      }
-
       & .slider {
         inline-size: 100%;
         block-size: 100%;
@@ -80,7 +56,7 @@
 
         background-color: var(--color-surface-opaque);
 
-        transform: translateY(83%);
+        transform: translateY(80%);
         transition: 300ms;
 
         text-decoration: none;
@@ -108,7 +84,7 @@
     gap: 1rem;
     list-style: none;
 
-    & li {
+    & li.project {
       inline-size: 100%;
 
       box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
@@ -116,7 +92,6 @@
 
       display: flex;
       flex-flow: column nowrap;
-      gap: 0.7rem;
 
       & a {
         text-decoration: none;
@@ -127,6 +102,7 @@
         block-size: 10rem;
 
         padding: 0.5rem;
+        border-radius: 8px 8px 0 0;
 
         background-position: center center;
         background-size: cover;
@@ -134,99 +110,106 @@
 
         text-decoration: none;
       }
+    }
+  }
 
-      & .description {
-        padding: 0.5rem;
+  & .description {
+    border-radius: 0 0 8px 8px;
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+
+    background-color: var(--color-surface);
+
+    & .title {
+      display: flex;
+      justify-content: space-between;
+
+      & span {
+        border-radius: 8px;
+        padding: 0 0.3rem;
+
         display: flex;
-        flex-flow: column nowrap;
-        gap: 1rem;
-        & .title {
-          display: flex;
-          justify-content: space-between;
+        align-items: center;
 
-          & span {
-            border-radius: 8px;
-            padding: 0 0.3rem;
+        color: var(--color-text-light);
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
 
-            display: flex;
-            align-items: center;
+      & .finished {
+        background-color: var(--color-success);
+      }
+      & .inProgress {
+        background-color: var(--color-warning);
+      }
+    }
 
-            color: var(--color-text-light);
-            font-weight: 500;
-            font-size: 0.8rem;
-          }
+    & .technologies {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      overflow-x: scroll;
+      scrollbar-width: none;
 
-          & .finished {
-            background-color: var(--color-success);
-          }
-          & .inProgress {
-            background-color: var(--color-warning);
-          }
+      & ul.technologiesList {
+        inline-size: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        list-style: none;
+
+        & li:first-child {
+          border-left: none;
+          padding: 0 1rem 0 0;
         }
 
-        & .technologies {
+        & li {
+          box-shadow: none;
+          border-radius: 0;
+          border-left: solid 1px var(--color-hover);
+          padding: 0 1rem;
+
           display: flex;
-          flex-flow: row nowrap;
-          align-items: center;
+          flex-flow: column nowrap;
+          align-items: start;
+          gap: 0.5rem;
 
-          overflow-x: scroll;
-          scrollbar-width: none;
-
-          & ul.technologiesList {
+          & .icons {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
+            gap: 1rem;
 
-            list-style: none;
-
-            & li:first-child {
-              border-left: none;
-              padding: 0 1rem 0 0;
-            }
-
+            list-style: 0;
             & li {
-              box-shadow: none;
-              border-radius: 0;
-              border-left: solid 1px var(--color-hover);
-              padding: 0 1rem;
-
-              display: flex;
-              flex-flow: column nowrap;
-              align-items: start;
-              gap: 0.5rem;
-
-              & .icons {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                gap: 1rem;
-
-                list-style: 0;
-                & li {
-                  border: none;
-                  padding: 0;
-                  & img {
-                    inline-size: 2rem;
-                  }
-                }
+              border: none;
+              padding: 0;
+              & img {
+                inline-size: 2rem;
               }
             }
           }
         }
+      }
+    }
 
-        & .links {
-          display: flex;
-          justify-content: space-between;
+    & .links {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
 
-          & a {
-            border-radius: 6px;
-            padding: 0.5rem 1rem;
+      & a {
+        flex: 1 0 0;
+        border-radius: 6px;
+        padding: 0.5rem 1rem;
 
-            background-color: var(--color-accent);
+        background-color: var(--color-accent);
 
-            font-weight: 500;
-          }
-        }
+        text-align: center;
+        font-weight: 500;
       }
     }
   }
@@ -237,6 +220,37 @@
     & ul.projectsForDesktop {
       display: none;
     }
+    & .technologies {
+      & ul.technologiesList {
+        & li {
+          box-shadow: none;
+          border-radius: 0;
+          border-left: solid 1px var(--color-hover);
+          padding: 0 1rem;
+
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: start;
+          gap: 0.5rem;
+
+          & .icons {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 0rem;
+
+            list-style: 0;
+            & li {
+              border: none;
+              padding: 0;
+              & img {
+                inline-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -245,17 +259,17 @@
     & ul.projectsForMobile {
       display: none;
     }
+    & .description {
+      background-color: transparent;
+    }
   }
 }
 
-@media (width > 1130px) {
+@media (width >= 1128px) {
   .projects {
     & ul.projectsForDesktop {
-      & li {
+      & li.project {
         max-inline-size: 32.5%;
-        & .slider {
-          transform: translateY(85%);
-        }
       }
     }
   }
