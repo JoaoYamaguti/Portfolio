@@ -1,1 +1,1 @@
-export const profilePicture = 'https://github.com/JoaoYamaguti.png'
+export const profilePicture = 'https://avatars.githubusercontent.com/JoaoYamaguti'

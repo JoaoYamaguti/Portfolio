@@ -1,14 +1,16 @@
 .socialMedias {
   & ul {
+    inline-size: 100%;
+
     margin-top: 1.5rem;
 
     list-style: none;
 
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    flex-flow: column wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 
     & li {
       inline-size: 100%;
@@ -48,6 +50,9 @@
       }
     }
   }
+  & p {
+    margin-block-start: 1rem;
+  }
 
   & .LinkedIn {
     background-color: var(--color-linkedin);
@@ -81,11 +86,22 @@
   }
 }
 
-@media (width > 48rem) {
+@media (width >= 48rem) {
+  .socialMedias {
+    & ul {
+      flex-flow: row wrap;
+      & li {
+        flex: 1 0 21.5rem;
+      }
+    }
+  }
+}
+
+@media (width >= 1128px) {
   .socialMedias {
     & ul {
       & li {
-        max-inline-size: 15rem;
+        max-inline-size: 23.5%;
       }
     }
   }

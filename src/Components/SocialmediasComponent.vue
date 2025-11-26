@@ -43,6 +43,12 @@ const copyToClipboard = async (text: string) => {
         </button>
       </li>
     </ul>
+    <p>
+      {{ content.resumeLabel }}
+      <a href="./files/Perfil_Tec-JoaoVictorYamagutiAlves.pdf" target="_blank">{{
+        content.resumeClickLabel
+      }}</a>
+    </p>
   </div>
 </template>
 

@@ -24,4 +24,6 @@ export interface IContent {
   }
   socialMediasTitle: string
   EmailCopiedMessage: string
+  resumeLabel: string
+  resumeClickLabel: string
 }

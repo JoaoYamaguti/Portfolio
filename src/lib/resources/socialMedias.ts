@@ -19,9 +19,9 @@ export const socialMedias = [
     icon: 'pi-whatsapp',
     link: 'https://wa.me/qr/GTQGX655SGIFL1',
   },
-  {
-    name: 'Instagram',
-    icon: 'pi-instagram',
-    link: 'https://www.instagram.com/juao_yamaguti',
-  },
+  // {
+  //   name: 'Instagram',
+  //   icon: 'pi-instagram',
+  //   link: 'https://www.instagram.com/juao_yamaguti',
+  // },
 ]

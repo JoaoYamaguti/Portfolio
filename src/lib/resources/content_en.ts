@@ -98,4 +98,6 @@ export const contentEn = {
   },
   socialMediasTitle: 'Social Medias',
   EmailCopiedMessage: 'Email copied to clipboard.',
+  resumeLabel: 'Download my resume',
+  resumeClickLabel: 'here.',
 }

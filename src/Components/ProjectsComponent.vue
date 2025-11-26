@@ -16,7 +16,7 @@ const content = inject<IContent>('content')
         :style="{ 'background-image': 'url(' + project.backgroundImage + ')' }"
         class="project"
       >
-        <a :href="project.link" target="_blank">
+        <a :href="project.repository" target="_blank">
           <div class="slider">
             <div class="description">
               <div class="title">
@@ -75,7 +75,7 @@ const content = inject<IContent>('content')
             </ul>
           </div>
           <div class="links">
-            <a :href="project.link">{{ content?.projects.linkLabel }}</a>
+            <a v-if="project.link" :href="project.link">{{ content?.projects.linkLabel }}</a>
             <a :href="project.repository">{{ content?.projects.repositoryLabel }}</a>
           </div>
         </div>

@@ -98,4 +98,6 @@ export const contentPtBr = {
   },
   socialMediasTitle: 'Medias Sociais',
   EmailCopiedMessage: 'Email copiado para a área de transferência.',
+  resumeLabel: 'Baixe meu currículo',
+  resumeClickLabel: 'aqui.',
 }
